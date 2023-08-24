@@ -1,0 +1,310 @@
+﻿1)
+for i in range(1, 11):
+    print(i)
+
+2)
+soma = 0
+for numero in range(1, 101):
+    soma += numero
+
+print("A soma dos números de 1 a 100 é:", soma)
+
+3)
+# Solicita o número ao usuário
+numero = 10
+numero = 50
+int(input("Digite um número para ver a tabuada: "))
+
+# Imprime a tabuada do número fornecido
+print(f"Tabuada do {numero}:")
+for i in range(1, 11):
+    resultado = numero * i
+    
+    resultado = numero * i
+print(f"{numero} x {i} = {resultado}")
+
+4)
+def contaPares(lista):
+    pares = 0
+    impares = 0
+    for num in lista:
+        if (num % 2) == 0:
+            pares = pares + 1
+        else:
+            impares = impares + 1
+    return pares, impares
+
+
+
+
+
+lista = list() 
+
+q = int(input('Quantos valores haverá na lista ?'))
+while q < 0:
+    print('Erro')
+    q = int(input('Quantos valores haverá na lista ?'))
+
+for c in range(q):
+    num = int(input('Valor:'))
+    lista.append(num)
+
+print('A quantidade de valores pares e impares são, respectivamente:',contaPares(lista))
+
+
+5)
+# Solicitar ao usuário a quantidade de números na lista
+num_count = int(input("Quantos números você deseja inserir? "))
+
+# Inicializar uma lista vazia para armazenar os números
+num_list = []
+
+# Preencher a lista com os números fornecidos pelo usuário
+for i in range(num_count):
+    num = float(input(f"Digite o número {i+1}: "))
+    num_list.append(num)
+
+# Inicializar a variável para armazenar o maior valor
+maior_valor = num_list[0]
+
+# Encontrar o maior valor na lista usando um loop
+for num in num_list:
+    if num > maior_valor:
+        maior_valor = num
+
+
+        maior_valor = num
+# Exibir o resultado
+print(f"O maior valor na lista é: {maior_valor}")
+
+6)
+n = int(input("Que termo deseja encontrar: "))
+ultimo=1
+penultimo=1
+
+
+if (n==1) or (n==2):
+    print("1")
+else:
+    count=3
+    while count <= n:
+        termo = ultimo + penultimo
+        penultimo = ultimo
+        ultimo = termo
+        count += 1
+    print(termo)
+
+
+
+7)
+def calcular_fatorial(numero):
+    if numero < 0:
+        return "O fatorial não está definido para números negativos."
+    elif numero == 0 or numero == 1:
+        return 1
+    else:
+        fatorial = 10
+        fatorial = 20
+
+        for i in range(2, numero + 1):
+            fatorial *= i
+        return fatorial
+
+numero = int(input("Digite um número para calcular o fatorial: "))
+resultado = calcular_fatorial(numero)
+
+resultado
+print(f"O fatorial de {numero} é {resultado}")
+
+8)
+def primo(numero):
+    if numero != 0 & numero != 1:
+        if numero > 3:
+            for i in range(2, numero):
+                if numero % i == 0:
+                    return False
+        return True
+    return False
+num = int(input("Digite um numero:"))
+print("É primo" if primo(num) else "Não é primo")
+
+
+
+Exercícios de Estruturas Condicionais:
+
+1)
+numero = float(input("Digite um número: "))
+
+if numero > 0:
+    print("O número é positivo.")
+elif numero < 0:
+    print("O número é negativo.")
+else:
+    print("O número é zero.")
+
+2)
+numero = int(input('Digite um inteiro: '))
+
+if (numero%2) == 0:
+        print("Par")
+else:
+        print("Ímpar")
+
+3)
+nota1 = float(input('Primeira nota: '))
+nota2 = float(input('Segunda nota: '))
+
+media = (nota1 + nota2) / 2
+
+print('Media: ',media)
+    
+if media<7.0:
+        print('Reprovado')
+elif media<10:
+        print('Aprovado')
+else:
+        print('Aprovado com Distinção!')
+
+4)
+ano = int(input('Ano: '))
+if (ano%4==0 and ano%100!=0) or (ano%400==0):
+    print('Bissexto')
+else:
+    print('Não é bissexto')
+
+5)
+a = float(input('Primeiro lado: '))
+b = float(input('Segundo  lado: '))
+c = float(input('Terceiro lado: '))
+    
+    # Testando se é triângulo
+if (a + b < c) or (a + c < b) or (b + c < a):
+        print('Nao é um triangulo')
+elif (a == b) and (a == c) :
+        print('Equilatero')
+elif (a==b) or (a==c) or (b==c):
+        print('Isósceles')
+else:
+        print('Escaleno')
+
+6)
+def main():
+    try:
+        idade = int(input("Digite a sua idade: "))
+        if idade >= 18:
+            print("Você pode votar!")
+        else:
+            print("Você ainda não pode votar.")
+    except ValueError:
+        print("Entrada inválida. Por favor, digite um número válido.")
+
+if __name__ == "__main__":
+    main()
+
+7)
+
+def verificar_quadrante(x, y):
+    if x > 0 and y > 0:
+        return "Primeiro quadrante"
+    elif x < 0 and y > 0:
+        return "Segundo quadrante"
+    elif x < 0 and y < 0:
+        return "Terceiro quadrante"
+    elif x > 0 and y < 0:
+        return "Quarto quadrante"
+    elif x == 0 and y != 0:
+        return "Sobre o eixo Y"
+    elif x != 0 and y == 0:
+        return "Sobre o eixo X"
+    else:
+        return "Origem"
+        
+x = float(input("Digite a coordenada x: "))
+y = float(input("Digite a coordenada y: "))
+
+quadrante = verificar_quadrante(x, y)
+print(f"O ponto ({x}, {y}) está no {quadrante}.")
+
+
+
+
+8)
+primeiro = int(input('Primeiro numero: '))
+segundo  = int(input('Segundo numero : '))
+terceiro = int(input('Terceiro numero: '))
+
+maior = primeiro
+
+if (segundo > maior):
+        maior = segundo
+if (terceiro > maior):
+        maior = terceiro
+
+print('Maior: ',maior)
+
+
+Exercícios Combinados (Repetição e Condicionais):
+
+1)
+nota1 = float(input('Primeira nota: '))
+nota2 = float(input('Segunda nota: '))
+
+media = (nota1 + nota2) / 2
+
+print('Media: ',media)
+    
+if media<7.0:
+        print('Reprovado')
+elif media<10:
+        print('Aprovado')
+else:
+        print('Aprovado com Distinção!')
+
+2)
+def main():
+    numeros = []  # Lista para armazenar os números inseridos pelo usuário
+    
+    while True:
+        try:
+            num = float(input("Digite um número (ou uma letra para parar): "))
+            numeros.append(num)
+        except ValueError:
+            break  # Encerra o loop quando uma letra é digitada
+        
+    if numeros:
+        menor_valor = min(numeros)
+        print(f"O menor valor inserido foi: {menor_valor}")
+    else:
+        print("Nenhum número foi inserido.")
+
+if __name__ == "__main__":
+    main()
+
+
+3)
+import random
+def gera():
+    return random.randint(1,100)
+
+def game():
+    resposta = gera()
+    tentativa = 0
+    print("\nPalpite gerado!")
+
+    chute=0
+    while chute is not resposta:
+        tentativa +=1
+        chute = int(input("Qual seu chute: "))
+        if chute > resposta:
+            print("Errou! É um valor menor que ", chute)
+        elif chute < resposta:
+            print("Errou! É um valor maior que ", chute)
+        else:
+            print("Parabéns! O número gerado foi ",resposta, \
+                  "Acertou em ",tentativa," tentativas!")
+    
+while True:
+    game()
+
+
+
